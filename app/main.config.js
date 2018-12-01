@@ -9,14 +9,14 @@
       url: '/courses',
       views: {
         '': {
-          templateUrl : 'app/modules/courses/courses.html'
+          templateUrl : 'modules/courses/courses.html'
         }
     }})
     .state('courses.list', {
       url: '/list',
       views: {
         'course-list': {
-          templateUrl : 'app/modules/courses/partials/course_list.html',
+          templateUrl : 'modules/courses/partials/course_list.html',
           controller : 'courseCtrl'
         }
       }
@@ -25,7 +25,7 @@
       url: '/add',
       views: {
         'add-course': {
-          templateUrl : 'app/modules/courses/partials/add_course.html',
+          templateUrl : 'modules/courses/partials/add_course.html',
           controller : 'courseCtrl'
         }
       }
@@ -34,7 +34,7 @@
       url: '/edit/:courseId',
       views: {
         'edit-course': {
-          templateUrl : 'app/modules/courses/partials/edit_course.html',
+          templateUrl : 'modules/courses/partials/edit_course.html',
           controller : 'courseCtrl'
         }
       }
@@ -43,7 +43,7 @@
       url: '/practice',
       views: {
         '' : {
-          templateUrl : 'app/modules/practice/practice.html',
+          templateUrl : 'modules/practice/practice.html',
           controller : 'practiceCtrl'
         }
       }
