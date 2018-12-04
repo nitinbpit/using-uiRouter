@@ -12,11 +12,19 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.min.js"></script>
 
       <!-- my files -->
-      <script src="main.config.js"></script>
-      <script src="modules/practice/practice.ctrl.js"></script>
-      <script src="services/course.srvc.js"></script>
+      <!-- controllers -->
+      <script src = "main.config.js"></script>
+      <script src = "modules/practice/practice.ctrl.js"></script>
+      <script src = "modules/courses/courses.ctrl.js"></script>
+      <script src = "modules/courses/partials/courseList.ctrl.js"></script>
+      <script src = "modules/courses/partials/addCourse.ctrl.js"></script>
+      <script src = "modules/courses/partials/editCourse.ctrl.js"></script>
+      <!-- directives -->
       <script src="directives/myTableDrctv.js"></script>
-      <script type="text/javascript" src = "modules/courses/course.ctrl.js"></script>
+      <!-- services -->
+      <script src="services/getCourses.srvc.js"></script>
+      <script src="services/handleError.srvc.js"></script>
+      <!-- manual bootstrap of angularjs -->
       <script>
         angular.element(document).ready(function() {
          angular.bootstrap(document, ['myApp']);

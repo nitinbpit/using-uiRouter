@@ -1,0 +1,23 @@
+<div>
+	<h1>Edit Course</h1>
+	<div ng-show="isLoading" style="color:green">
+				<span class='glyphicon glyphicon-time'></span> Loading...
+	</div>
+	<form ng-show="!isLoading">
+		<label>Course Name:</label>
+		<input type="text" ng-model="courseToEdit.name" /> <br>
+		<label>Category:</label>
+		<select ng-model="courseToEdit.category">
+			<option value="Development">Development</option>
+			<option value="Business">Business</option>
+			<option value="Design">Design</option>
+			<option value="Marketing">Marketing</option>
+		</select> <br>
+		<label>Timeline:</label>
+		<input type="number" ng-model="courseToEdit.timeline" /> <br>
+		<label>Price:</label>
+		<input type="number" ng-model="courseToEdit.price" /> <br>
+		<button ng-click="updateCourse(courseToEdit)">Update</button>
+		<button ng-click="cancelEdit()">Cancel</button>
+	</form>
+</div>

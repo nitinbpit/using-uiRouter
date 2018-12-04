@@ -9,15 +9,16 @@
       url: '/courses',
       views: {
         '': {
-          templateUrl : 'modules/courses/courses.html'
+          templateUrl : 'modules/courses/courses.prtl.html',
+          controller : 'coursesCtrl'
         }
     }})
     .state('courses.list', {
       url: '/list',
       views: {
         'course-list': {
-          templateUrl : 'modules/courses/partials/course_list.html',
-          controller : 'courseCtrl'
+          templateUrl : 'modules/courses/partials/courseList.prtl.html',
+          controller : 'courseListCtrl'
         }
       }
     })
@@ -25,8 +26,8 @@
       url: '/add',
       views: {
         'add-course': {
-          templateUrl : 'modules/courses/partials/add_course.html',
-          controller : 'courseCtrl'
+          templateUrl : 'modules/courses/partials/addCourse.prtl.html',
+          controller : 'addCourseCtrl'
         }
       }
     })
@@ -34,8 +35,8 @@
       url: '/edit/:courseId',
       views: {
         'edit-course': {
-          templateUrl : 'modules/courses/partials/edit_course.html',
-          controller : 'courseCtrl'
+          templateUrl : 'modules/courses/partials/editCourse.prtl.html',
+          controller : 'editCourseCtrl'
         }
       }
     })
