@@ -1,0 +1,14 @@
+
+.border{
+  margin:5px;
+  padding: 5px;
+  background-color: #F1F1F1;
+  border-radius: 10px;
+}
+.center{
+  text-align: center;
+}
+
+.zero-padding{
+  padding:0px;
+}

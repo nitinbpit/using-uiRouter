@@ -19,7 +19,7 @@
         <div class="col-md-2">
           <label>Course Name:</label>
         </div>
-        <div class="col">
+        <div class="col-md-10">
           <input class="my-input" type="text" name = "name" ng-model = "course.name" required></input>
           <b ng-if="myForm.name.$touched">[Touched]</b>
           <b ng-if="myForm.name.$pristine">[Pristine]</b>
@@ -33,7 +33,7 @@
         <div class="col-md-2">
           <label>Category:</label>
         </div>
-        <div class="col">
+        <div class="col-md-10">
           <select ng-model="course.category" required>
       			<option value="Development">Development</option>
       			<option value="Business">Business</option>
@@ -47,7 +47,7 @@
         <div class="col-md-2">
           <label>Timeline:</label>
         </div>
-        <div class="col">
+        <div class="col-md-10">
           <input class="my-input" type="number" name = "timeline" ng-model = "course.timeline" required></input>
         </div>
       </div>
@@ -56,7 +56,7 @@
         <div class="col-md-2">
           <label>Price:</label>
         </div>
-        <div class="col">
+        <div class="col-md-10">
           <input class="my-input" type="number" name = "price" ng-model = "course.price" required></input>
         </div>
       </div>

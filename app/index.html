@@ -12,6 +12,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.min.js"></script>
 
       <!-- my files -->
+      <!-- css -->
+      <link href="style.css" rel="stylesheet">
       <!-- controllers -->
       <script src = "main.config.js"></script>
       <script src = "modules/practice/practice.ctrl.js"></script>
@@ -34,31 +36,44 @@
 
     <body>
 
-      <header style="margin:1%; background-color: #F1F1F1; text-align: center;">
-        <div class="row">
-          <div class="col-md-12">
-            <h3>Manager</h3>
+    <div class="container fluid well">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="center">
+            <header>
+              <h1>Manager</h1>
+            </header>
           </div>
-        </div>
-      </header>
-
-      <div class="row" style="margin:0.5%">
-        <nav>
-          <div class="col-md-2 well" style="height:100%; margin:0.5%">
-            <ul>
-              <li>
-                <a href="#/courses">Courses</a>
-              </li>
-              <li>
-                <a href="#/practice">Practice</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div class="col-md-9 well" style="height:100%; margin:0.5%">
-          <div ui-view></div>
         </div>
       </div>
+    </div>
+
+    <div class="container fluid well">
+      <div class="row">
+          <div class="col-md-2">
+            <div class="">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#/courses">Courses</a>
+                  </li>
+                  <li>
+                    <a href="#/practice">Practice</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+        <div class="col-md-10">
+          <div class="">
+            <div ui-view="main-view"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
 
       <ng-view></ng-view>

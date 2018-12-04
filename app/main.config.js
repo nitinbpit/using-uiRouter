@@ -8,7 +8,7 @@
       abstract: true,
       url: '/courses',
       views: {
-        '': {
+        'main-view': {
           templateUrl : 'modules/courses/courses.prtl.html',
           controller : 'coursesCtrl'
         }
@@ -43,7 +43,7 @@
     .state('practice', {
       url: '/practice',
       views: {
-        '' : {
+        'main-view' : {
           templateUrl : 'modules/practice/practice.html',
           controller : 'practiceCtrl'
         }
