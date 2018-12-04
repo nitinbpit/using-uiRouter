@@ -1,29 +1,72 @@
 <div>
-  <h3>Smart Form to add new Course</h3>
+
   <form novalidate name="myForm">
-    <label>Course Name</label>
-    <input class="my-input" type="text" name = "course-name" ng-model = "course.name" required></input><br>
-    <label>Category</label>
-    <select ng-model="course.category" required>
-			<option value="Development">Development</option>
-			<option value="Business">Business</option>
-			<option value="Design">Design</option>
-			<option value="Marketing">Marketing</option>
-		</select> <br>
-    <label>Timeline</label>
-    <input class="my-input" type="number" name = "timeline" ng-model = "course.timeline" required></input><br>
-    <label>Price</label>
-    <input class="my-input" type="number" name = "price" ng-model = "course.price" required></input><br>
-    <button type="submit" ng-click="addCourse(course);" ng-disabled="myForm.$invalid">Add</button>
-    <button ng-click="cancelAdd()">Cancel</button>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <label>Smart Form to add new Course</label>
+          <b ng-if="myForm.$pristine">[Pristine]</b>
+          <b ng-if="myForm.$dirty">[Dirty]</b>
+          <b ng-if="myForm.$valid">[Valid]</b>
+          <b ng-if="myForm.$invalid">[Invalid]</b>
+          <b ng-if="myForm.$submitted">[Submitted]</b>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <label>Course Name:</label>
+        </div>
+        <div class="col">
+          <input class="my-input" type="text" name = "name" ng-model = "course.name" required></input>
+          <b ng-if="myForm.name.$touched">[Touched]</b>
+          <b ng-if="myForm.name.$pristine">[Pristine]</b>
+          <b ng-if="myForm.name.$dirty">[Dirty]</b>
+          <b ng-if="myForm.name.$valid">[Valid]</b>
+          <b ng-if="myForm.name.$invalid">[Invalid]</b>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <label>Category:</label>
+        </div>
+        <div class="col">
+          <select ng-model="course.category" required>
+      			<option value="Development">Development</option>
+      			<option value="Business">Business</option>
+      			<option value="Design">Design</option>
+      			<option value="Marketing">Marketing</option>
+      		</select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <label>Timeline:</label>
+        </div>
+        <div class="col">
+          <input class="my-input" type="number" name = "timeline" ng-model = "course.timeline" required></input>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <label>Price:</label>
+        </div>
+        <div class="col">
+          <input class="my-input" type="number" name = "price" ng-model = "course.price" required></input>
+        </div>
+      </div>
+
+      <button type="submit" ng-click="addCourse(course);" ng-disabled="myForm.$invalid">Add</button>
+      <button ng-click="cancelAdd()">Cancel</button>
+
+    </div>
+
+
   </form>
-  <div >
-    <label>Price touched? <b ng-if="myForm.price.$touched">{{myForm.price.$touched}}</b></label><br>
-    <label>Price untouched? <b ng-if="myForm.price.$untouched">{{myForm.price.$untouched}}</b></label><br>
-    <label>Form State valid? <b ng-if="myForm.$valid">{{myForm.$valid}}</b></label><br>
-    <label>Form State invalid? <b ng-if="myForm.$invalid">{{myForm.$invalid}}</b></label><br>
-    <label>Form State pristine? <b ng-if="myForm.$pristine">{{myForm.$pristine}}</b></label><br>
-    <label>Form State dirty? <b ng-if="myForm.$dirty">{{myForm.$dirty}}</b></label><br>
-    <label>Form State submitted? <b ng-if="myForm.$submitted">{{myForm.$submitted}}</b></label><br>
-  </div>
+
 </div>
